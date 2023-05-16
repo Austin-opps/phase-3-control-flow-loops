@@ -39,7 +39,15 @@ def fizzbuzz_printer
   end
 end
 
+fizzbuzz_printer
+
 def reverse_string(str)
   # your code here
-  str.split("").reverse.join
+  reversed = ""
+  (str.length - 1).downto(0) do |i|
+    reversed += str[i]
+  end
+  reversed
 end
+
+puts reverse_string("hello")
